@@ -23,7 +23,7 @@ class Api::V1::BooksController < ApplicationController
     def destroy 
         book = Book.find(params[:id])
         Book.destroy(params[:id])
-        render json: BookSerializer.format_deleted_book(book)
+        render json: book
     end 
 
     private 
